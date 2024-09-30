@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Company Login{% endblock %}
+
+{% block content %}
+<div id='containerHome' class="container">
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+            <img
+                src="/static/images/tinder-icon.png"
+                alt='Logo projeto' width="100px"/>
+            <h2>Login Empresa</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <form method="POST" action="{{ url_for('company_login') }}">
+                {{ form.hidden_tag() }}  <!-- CSRF Token -->
+                
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    {{ form.email(class="form-control", id="form2Example1") }}
+                    <label class="form-label" for="form2Example1">Email</label>
+                    {% for error in form.email.errors %}
+                        <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    {{ form.password(class="form-control", id="form2Example2") }}
+                    <label class="form-label" for="form2Example2">Senha</label>
+                    {% for error in form.password.errors %}
+                        <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                
+                <!-- Submit and Back buttons -->
+                <div class="d-flex justify-content-between mb-4">
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                    <a href="{{ url_for('home') }}" class="btn btn-secondary">Voltar</a>
+                </div>
+            </form>
+            
+            <!-- Register buttons -->
+            <div class="text-center">
+                <p>Ainda não tem uma conta?<a href="{{ url_for('company_register') }}"> Crie uma aqui!</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

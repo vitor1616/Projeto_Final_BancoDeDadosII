@@ -1,0 +1,132 @@
+/* Estilos gerais */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #007BFF; /* Fundo azul */
+  color: white; /* Texto branco para contraste */
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+h5 {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  transition: all 0.1s ease; /* Transição suave para hover */
+}
+
+a.btn {
+  margin-right: 0.5rem;
+}
+
+/* Hover nos botões */
+.btn:hover {
+  box-shadow: -11px 13px 9px -4px rgba(0, 0, 0, 0.28); /* Sombra semelhante ao hover das cards */
+  transform: scale(1.05); /* Leve aumento no tamanho */
+}
+
+/* Estilo para o título "Tinder Jobs" */
+#containerHome h2 {
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem; /* Diminui o tamanho da fonte */
+  text-align: center; /* Centraliza o texto */
+  padding: 10px;
+}
+
+/* Ajuste de tamanho do logo da página inicial */
+#containerHome img {
+  max-width: 60%; /* Reduz o tamanho da imagem logo */
+  height: auto;   /* Mantém a proporção da imagem */
+  margin-bottom: 20px; /* Adiciona um pequeno espaçamento abaixo da imagem */
+}
+
+#containerHome .card-title {
+  border: none; /* Remove qualquer borda */
+}
+
+#containerHome a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+#containerHome .card {
+  border: none; /* Remove a borda da card, se houver */
+}
+
+/* Centralização e ajustes para título "Entrar como:" */
+#containerHome h2 {
+  font-size: 2rem; /* Ajusta o tamanho do texto "Entrar como" */
+  margin-top: 10px; /* Espaço acima do título */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 767px) {
+  #containerHome img {
+      max-width: 50%; /* Tamanho ajustado para telas menores */
+  }
+
+  #containerHome h2 {
+      font-size: 1.5rem; /* Tamanho do título menor para dispositivos móveis */
+  }
+}
+
+/* Ajustes responsivos, caso necessário */
+@media (max-width: 767px) {
+  #containerHome h2 {
+      font-size: 1.8rem; /* Diminui ainda mais em telas pequenas */
+  }
+}
+
+/* Formulário */
+form {
+  margin-top: 2rem;
+}
+
+/* Ajuste para o botão Desenvolvedor */
+#optionDev {
+  background-color: #d4bd37; /* Amarelo */
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+#optionDev:hover {
+  background-color: #c9a12a; /* Efeito de hover com tom mais escuro */
+  transform: scale(1.05);
+}
+
+/* Ajuste para o botão Empresa */
+#optionEmp {
+  background-color: #002366; /* Azul escuro */
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+#optionEmp:hover {
+  background-color: #001a4d; /* Efeito de hover com tom mais escuro */
+  transform: scale(1.05);
+}
+
+/* Ajuste para dispositivos menores */
+@media (max-width: 767px) {
+  .container {
+      padding: 1rem;
+  }
+}

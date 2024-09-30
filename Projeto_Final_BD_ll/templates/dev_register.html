@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% block title %}Dev Cadastro{% endblock %}
+
+{% block content %}
+<div id='containerHome' class="container">
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+            <img
+                src="/static/images/tinder-icon.png"
+                alt='Logo projeto' width="100px"/>
+            <h2>Dev Cadastro</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            {{ render_form(form, novalidate=True) }}
+            <div class="d-flex justify-content-between mt-4">
+                <a href="{{ url_for('home') }}" class="btn btn-secondary">Voltar</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

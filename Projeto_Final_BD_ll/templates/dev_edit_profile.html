@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Editar Perfil do Desenvolvedor{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Editar Perfil do Desenvolvedor</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.name.label }}<br>
+            {{ form.name(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.habilidades.label }}<br>
+            {{ form.habilidades(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Perfil do Desenvolvedor{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Perfil da Empresa</h2>
+    <div class="mt-4">
+        <h5>Nome: {{ company.name }}</h5>
+        <h5>E-mail: {{ company.email }}</h5>
+        <h5>Descrição: {{ company.descricao }}</h5>
+    </div>
+    <a href="{{ url_for('company_edit_profile') }}" class="btn btn-warning">Editar Perfil</a>
+    <a href="{{ url_for('company_logout') }}" class="btn btn-danger mt-3">Sair</a>
+
+    <!-- Formulário para redirecionar para company_match -->
+    <form action="{{ url_for('company_match') }}" method="get" class="mt-3">
+        <button type="submit" class="btn btn-primary">Ver Desenvolvedores</button>
+    </form>
+</div>
+{% endblock %}
